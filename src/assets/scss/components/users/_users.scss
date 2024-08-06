@@ -1,0 +1,44 @@
+.users {
+    padding: rem(140) 0;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 rem(30);
+        margin: 0 0 rem(82);
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    &__empty {
+        font-size: rem(14);
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        border-bottom: rem(1) solid $color__blue-border;
+    }
+
+    &__title,
+    &__details {
+        display: flex;
+        align-items: center;
+
+        > span {
+            padding: rems(20 12);
+            flex: 1;
+        }
+    }
+
+    &__details {
+        border-bottom: rem(1) solid $color__gold-border;
+    }
+
+    &__children {
+        margin-left: rem(40);
+    }
+}

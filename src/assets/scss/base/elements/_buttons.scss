@@ -1,0 +1,37 @@
+:where(button, input:is([type="button"], [type="reset"], [type="submit"])) {
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+:where(.button, [role="button"]) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rems(16 22);
+    min-width: rem(240);
+    height: rem(52);
+    color: $color__button-text;
+    background: $color__button-background;
+    border: 1px solid transparent;
+    transition: color .45s $ease, background .45s $ease, border .45s $ease;
+
+    > .text {
+        font-family: $font__primary;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    &:is(:hover, :focus) {
+        color: $color__button-hover-text;
+        background: $color__button-hover-background;
+    }
+
+    &:is(.--small) {
+        font-size: rem(14);
+        padding: rems(10 22);
+        height: rem(44);
+    }
+}
